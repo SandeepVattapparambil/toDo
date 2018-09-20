@@ -1,0 +1,291 @@
+body {
+    background: #e2e1e0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    padding: 0px 200px 0px 200px;
+}
+
+.title {
+    font-size: 30px;
+}
+
+.sub-title {
+    font-size: 25px;
+}
+
+.todo {
+    font-size: 18px;
+    float: left;
+    margin: 0px 20px 20px 20px;
+    padding: 10px;
+    background: #f9d6f2;
+    border-radius: 22px;
+    clear: both;
+    max-width: 320px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.todoList>a {
+    float: right;
+    background: #ff000096;
+}
+
+.todo-done {
+    font-size: 18px;
+    float: left;
+    margin: 0px 20px 20px 20px;
+    padding: 10px;
+    border-radius: 22px;
+    clear: both;
+    background: #ccc;
+    font-style: italic;
+    text-decoration: line-through;
+    max-width: 320px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.card {
+    background: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    margin: 1rem;
+    position: relative;
+    width: 500px;
+}
+
+.card-shadow {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+div.active>a {
+    background: #72a572;
+}
+
+.group {
+    position: relative;
+    margin: 0px -15px 45px 45px;
+    float: left;
+}
+
+input {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid rgb(224, 15, 179);;
+}
+
+input:focus {
+    outline: none;
+}
+
+label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -20px;
+    font-size: 14px;
+    color: #5264AE;
+}
+
+.bar {
+    position: relative;
+    display: block;
+    width: 300px;
+}
+
+.bar:before,
+.bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: rgb(224, 15, 179);
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+input:focus~.bar:before,
+input:focus~.bar:after {
+    width: 50%;
+}
+
+.highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+input:focus~.highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: rgb(224, 15, 179);
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        background: rgb(224, 15, 179);
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: rgb(224, 15, 179);
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+#activeList, #inactiveList{
+    list-style: none;
+}
+
+.material-button-raised {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0 8px;
+    border: none;
+    border-radius: 50px;
+    padding: 0 16px;
+    min-width: 64px;
+    height: 36px;
+    vertical-align: middle;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: rgb(224, 15, 179);
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 36px;
+    overflow: hidden;
+    outline: none;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+
+.material-button-raised:hover,
+.material-button-raised:focus {
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.material-button-raised:active {
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.material-button-raised:disabled {
+    color: rgba(0, 0, 0, 0.38);
+    background-color: rgba(0, 0, 0, 0.12);
+    box-shadow: none;
+    cursor: initial;
+}
+
+.material-button-raised::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: currentColor;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.material-button-raised:hover::before {
+    opacity: 0.12;
+}
+
+.material-button-raised:focus::before {
+    opacity: 0.2;
+}
+
+.material-button-raised:active::before {
+    opacity: 0.32;
+}
+
+.material-button-raised:disabled::before {
+    opacity: 0;
+}
+
+.material-button-raised::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 18px;
+    border-radius: 50%;
+    padding: 50%;
+    width: 32px;
+    height: 32px;
+    background-color: currentColor;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+    transition: opacity 1s, transform 0.5s;
+}
+
+.material-button-raised:active::after {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0s;
+}
+
+.material-button-raised:disabled::after {
+    opacity: 0;
+}
+
+
+i {
+    padding-top: 5px;
+}

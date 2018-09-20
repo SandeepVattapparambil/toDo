@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>toDo</title>
+    <link href="./style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="card card-shadow">
+        <p class="title">toDo</p>
+        <div class="group">
+            <input id="newTask" type="text" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Todo</label>
+
+        </div>
+        <a id="addNewTask" class="material-button-raised"><i class="material-icons">add</i></a>
+    </div>
+
+    <div class="card card-shadow">
+        <p class="sub-title">Active todos</p>
+        <ul id="activeList">
+        </ul>
+
+
+    </div>
+    <div class="card card-shadow">
+        <p class="sub-title">Completed todos</p>
+        <ul id="inactiveList">
+        </ul>
+
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
